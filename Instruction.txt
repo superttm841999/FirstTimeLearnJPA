@@ -1,0 +1,17 @@
+Spring boot JPA practice
+============================
+Open the project using Intellij
+
+
+1. Create a entity class based on the firstTime/db_schema.png diagram in this package java/com/microlink/firstTime/domain.
+2. Create repository class based on the entity class inside this package java/com/microlink/firstTime/repository.
+3. Create service class based on the entity class inside this packace java/com/microlink/firstTime/services.
+	-Service class will call repository class to do create, read, update and delete function.
+4. Create api class for each entity inside this package java/com/microlink/firstTime/resources.
+	-Api class will call service class function.
+	-Create Api for create, read, update and delete entity
+
+
+
+
+
