@@ -1,5 +1,8 @@
 package com.microlink.firstTime.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.SEQUENCE;
@@ -30,7 +33,9 @@ public class Book {
     )
     private String title;
 
-    @ManyToOne
+
+    //@JsonManagedReference
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
     private Author author;
 

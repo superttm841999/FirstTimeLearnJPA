@@ -6,6 +6,7 @@ import com.microlink.firstTime.exception.ResourceNotFoundException;
 import com.microlink.firstTime.repository.BookRepository;
 import com.microlink.firstTime.services.AuthorService;
 import com.microlink.firstTime.services.BookService;
+import org.hibernate.annotations.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +41,7 @@ public class BookResource {
 //        if(authorService.findById(id).isEmpty()){
 //            return ResponseEntity.noContent().build();
 //        }
-
+        authorService.save(book.getAuthor());
         Book createBook = bookService.save(book);
         return ResponseEntity.ok(createBook);
     }

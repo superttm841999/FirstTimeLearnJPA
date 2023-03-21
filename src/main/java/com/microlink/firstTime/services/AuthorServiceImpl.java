@@ -39,17 +39,8 @@ public class AuthorServiceImpl implements AuthorService{
     @Override
     public List<Author> findAll() {
         List<Author> author = getAllAuthor();
-        List<Book> book = getAllBook();
 
-        for(int i=0; i<author.toArray().length;i++){
-            //bookArr.removeAll(bookArr);
-            for(int a=0; a<book.toArray().length;a++){
-                if(author.get(i).getId()== book.get(a).getAuthor().getId()){
-                    author.get(i).setBooks(getAllBookByAuthorId(author.get(i).getId()));
-                }
-            }
-        }
-        return author;
+        return authorRepository.findAll();
     }
 
     private Set<Book> getAllBookByAuthorId(Long id){

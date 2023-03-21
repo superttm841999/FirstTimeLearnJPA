@@ -26,18 +26,18 @@ public class FirstTimeApplication {
 	CommandLineRunner commandLineRunner(AuthorRepository authorRepository){
 		System.out.println("gg world");
 		return args -> {
-//			Author author1 = new Author("Tai","Ming");
+			Author author1 = new Author("Tai","Ming");
 //			Author author2 = new Author("TTT","111");
 //			Author author3 = new Author("AAA","222");
 //			authorRepository.save(author1);
 //			authorRepository.save(author2);
 //			authorRepository.save(author3);
 //
-//			Book book1 = new Book("Book1",1L);
+			Book book1 = new Book("Book1",author1);
 //			Book book2 = new Book("Book2",2L);
 //			Book book3 = new Book("Book3",3L);
 //
-//			bookRepository.save(book1);
+			bookRepository.save(book1);
 //			bookRepository.save(book2);
 //			bookRepository.save(book3);
 
